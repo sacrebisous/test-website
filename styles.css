@@ -1,0 +1,404 @@
+@font-face {
+   font-family: 'planet Estyle';
+   src: url(./fonts/PLANE___.TTF);
+} 
+
+@font-face {
+   font-family: 'Hemi Head';
+   src: url(./fonts/hemi\ head\ bd\ it.ttf);
+} 
+
+@font-face {
+   font-family: 'Atkinson Hyperlegible';
+   src: url(./fonts/Atkinson-Hyperlegible-Regular-102.ttf);
+   font-style: normal
+}
+
+@font-face {
+   font-family: 'Atkinson Hyperlegible';
+   src: url(./fonts/Atkinson-Hyperlegible-Bold-102.ttf);
+   font-weight: bold;
+}
+
+@font-face {
+   font-family: 'Atkinson Hyperlegible';
+   src: url(./fonts/Atkinson-Hyperlegible-Italic-102.ttf);
+   font-style: italic;
+}
+
+/* Basic elements */
+* {
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+   letter-spacing: 0.3px;
+}
+
+h1, h2, h3 {
+   font-family: 'Hemi Head';
+   color: rgb(240, 89, 172);
+   margin: 15px 0;
+}
+
+h3 {
+   font-family: 'planet Estyle';
+}
+
+a {
+   color: rgb(240, 89, 172);
+}
+
+hr {
+   border: 1px solid rgb(118, 191, 255);
+   margin: 30px 0;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   background-color: #D9AFD9;
+   background: linear-gradient(0deg, #97D9E1 0%,  #FFFF 30%, #FFFF 100%) fixed;
+   color: rgb(51, 159, 255);
+   margin: auto;
+   height: 100%;
+   width: 100%;
+   font-size: 18px;
+   font-family: 'Atkinson Hyperlegible', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+   margin: 15px 0;
+}
+
+img {
+   display: block;
+}
+
+ul li, ol li {
+   list-style-position: inside;
+}
+
+div.container {
+   width: 80%;
+   max-width: 1100px;
+   margin: 0 auto;
+   margin-top: 0;
+   border: 4px double;
+   background-color: white;
+}
+
+a.header {
+   text-decoration: none;
+}
+
+header {
+   height: 125px;
+   text-align: left;
+   padding-left: 20px;
+   background: url(images/header2.png);
+   background-size: cover;
+}
+header > h1, header>h2 {
+   margin: 0;
+   text-shadow: 3px 3px 0px white
+}
+
+nav {
+   background:  rgb(51, 159, 255);
+   background: linear-gradient(0deg, #5cb2ff 1%, rgb(51, 159, 255) 30%);
+   color: white;
+   border-top: 1px solid #9ed2ff;
+   /* border-bottom: 1px solid #39a3ff; */
+}
+
+footer {
+   background-color:rgb(51, 159, 255);
+   color: white;
+   padding-left: 5px;
+}
+
+footer p {
+   margin: 0;
+}
+
+footer a, a>visited {
+   color:rgb(180, 228, 233)
+}
+
+nav>ul {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-flow: row;
+}
+
+.leftalign {
+   float: left;   
+   margin-right: 20px;
+}
+
+.clearfix:after {
+   clear: both;
+   content: " ";
+   display: block;
+   font-size: 0;
+   height: 0;
+   visibility: hidden;
+}
+
+details {
+   margin: 30px 0;
+   padding-left: 20px;
+}
+
+summary {
+   border: 1px solid;
+   border-radius: 10px;
+   background: linear-gradient(180deg, #ffff 60%, #97D9E1 100%);
+   padding: 20px;
+}
+
+figure {
+   width: 100%;
+   font-style: italic;
+   display: inline-block;
+}
+
+figure img, figcaption {
+   max-width: 100%;
+   max-height: 500px;
+}
+
+div.box ul {
+   list-style-type: disclosure-closed;
+}
+
+/* Nav styling */
+
+li.nav:first-child {
+   border-left: none;
+}
+
+li.nav {
+   position: relative;
+   display: inline-block;
+   width: 20%;
+   white-space: nowrap;
+}
+
+li.nav a {
+   color:rgb(51, 159, 255);
+   text-align: center;
+   display: block;
+   width: 100%:
+}
+
+li.nav:before {
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 100%;
+   height: 50%;
+   background-color:rgba(255, 255, 255, 0.2);
+}
+
+li.nav>a {
+   color: white;
+   text-decoration: none;
+   line-height: 2.5em;
+}
+
+/* Dropdown transition stuff */
+div.dropdown-content {
+   visibility: hidden;
+   position: absolute;
+   background-color: white;
+   z-index: 1;
+   width: 100%;
+   box-shadow: 0px 0px 7px 3px #88c7ff;
+   -moz-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+   -ms-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+   max-height: 0;
+}
+
+div.dropdown-content a {
+   display: block;
+   text-decoration: none;
+   padding: 5px;
+   opacity: 0;
+   transition: 0.3s ease-in;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 0.8em;
+}
+
+div.dropdown-content a:hover {
+   background-color: #d7ebff;
+}
+
+li.nav:hover div.dropdown-content {
+   visibility: visible;
+   max-height: 200px;
+}
+
+li.nav:hover div.dropdown-content a {
+   opacity: 1;
+}
+
+/* end transition section */
+
+img.header {
+   float:right;
+   width: 200px;
+}
+
+main {
+   padding: 20px;
+   width: 80%;
+   border-left: 3px double;
+}
+
+.flex {
+   display: flex;
+}
+
+aside {
+   width: 20%;
+   padding: 20px;
+   position: relative;
+}
+
+img.fixed {
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto; 
+   left: 0;
+   right: 0;
+   bottom: 30px;
+   text-align: center;
+   transition: transform 1s ease-in-out;
+}
+
+img.fixed:hover {
+   transform: rotate(360deg)
+}
+
+section {
+   padding-top: 20px;
+}
+
+div.article {
+   display: block;
+   padding: 30px;
+   margin-bottom: 20px;
+}
+
+div.article > img {
+   width: 100px;
+   height: 100px;
+   border: 1px solid;
+   float: left;
+   margin-right: 30px;
+}
+
+p.index {
+   padding: 30px;
+}
+
+.clearfix:after {
+   clear: both;
+   content: " ";
+   display: block;
+   font-size: 0;
+   height: 0;
+   visibility: hidden;
+}
+
+@media only screen and (max-width: 2160px) {
+   
+}
+  
+@media only screen and (max-width: 1080px) {
+   div.flex {
+      flex-direction: column-reverse;
+      flex-wrap: row-reverse;
+   }
+
+   main {
+      border-left: none;
+      margin: auto ;
+   }
+   
+   aside {
+      margin: auto;
+      width:80%;
+   }
+
+   img.fixed {
+      padding-top: 30px;
+      position: static;
+      margin: 0 auto;
+      display: block;
+   }
+
+   div.container {
+      width: 100%;
+      max-width: 1080px;
+   }
+
+   nav>ul {
+      flex-flow: row;
+   }
+}
+
+@media only screen and (max-width: 540px) {
+   h1, h2, h3, h4 {
+      text-align: center;
+   }
+
+   nav ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap:wrap;
+   }
+
+   nav {
+      /* background: linear-gradient(0deg, #5cb2ff 1%, rgb(51, 159, 255) 30%); */
+   }
+
+   nav li {
+      border-top: 1px solid #8ac9ff;
+      min-width:100%;
+      background: linear-gradient(0deg, #5cb2ff 1%, rgb(51, 159, 255) 30%);
+   }
+
+   main {
+      padding: 0px;
+   }
+
+   img.header {
+      float: none;
+      margin: 0 auto;
+      display: block;
+   }
+
+   div.article {
+      margin: auto;
+      text-align: center;
+   }
+
+   div.article>img {
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      width: 100px;
+   }
+
+   p.index {
+      text-align: center;
+   }
+}
